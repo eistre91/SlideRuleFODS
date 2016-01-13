@@ -31,3 +31,5 @@ image(tumor_clusters, axes=FALSE, col=rainbow(k))
 SumWithinss = sapply(2:10, 
                      function(x) 
                        sum(kmeans(healthyVector, centers=x, iter.max=1000)$withinss))
+
+plot(NumClusters, SumWithinss, type="b")
